@@ -18,11 +18,18 @@
 <body>
     <!--particles.js container -->
     <div id="particles-js"></div>
-    <div class="wrapper">
+    <div class="wrapper animated fadeIn">
         <div class="header container-fluid m-0 p-0">
-            <nav class="navbar fadeInRight">
-                <div class="nav-container" style="display: none;">
-                    <ul class="nav bg-light">
+            <nav class="navbar">
+                <button class="burger-icon btn-outline-dark ml-auto">
+                    <div class="container" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+                <div class="hide nav-container">
+                    <ul class="nav bg-light animated">
                         <li class="nav-item">
                             <a href="./index.html" class="nav-link active">home</a>
                         </li>
@@ -40,13 +47,6 @@
                         </li>
                     </ul>
                 </div>
-                <button class="burger-icon btn-outline-dark ml-auto">
-                    <div class="container" onclick="myFunction(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </button>
             </nav>
         </div>
         <div class="main container-fluid">

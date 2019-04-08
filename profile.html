@@ -18,11 +18,18 @@
 <body>
     <!--particles.js container -->
     <div id="particles-js"></div>
-    <div class="wrapper">
+    <div class="wrapper animated fadeIn">
         <div class="header container-fluid m-0 p-0">
-            <nav class="navbar fadeInRight">
-                <div class="nav-container" style="display: none;">
-                    <ul class="nav bg-light">
+            <nav class="navbar">
+                <button class="burger-icon btn-outline-dark ml-auto">
+                    <div class="container" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+                <div class="hide nav-container">
+                    <ul class="nav bg-light animated">
                         <li class="nav-item">
                             <a href="./index.html" class="nav-link active">home</a>
                         </li>
@@ -40,12 +47,10 @@
                         </li>
                     </ul>
                 </div>
-                <button class="burger-icon btn-outline-dark ml-auto"
-                    style="background-image: url('./assets/images/Hamburger_icon.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; height: 48px; width: 48px;"></button>
             </nav>
         </div>
         <div class="main container-fluid">
-            <div class="main-content text-light">
+            <div class="main-content text-light mt-5 pt-3">
                 <h5>Fusce mollis sodales.</h5>
                 <p>Proin accumsan in enim ut commodo. Suspendisse potenti. Cras nec erat ac odio luctus vehicula.
                 </p>
@@ -53,7 +58,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis.</p>
                 <p>Donec imperdiet non magna.</p>
             </div>
-            <div class="gotos">
+            <div class="gotos mt-5">
                 <a href="./skills.html" class="skills-btn btn btn-light">skills</a>
             </div>
         </div>
@@ -63,7 +68,7 @@
     </div>
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!--     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -78,5 +83,4 @@
     <script src="./assets/js/popper.js"></script>
     <script src="./assets/js/bootstrap/bootstrap.js"></script>
 </body>
-
 </html>

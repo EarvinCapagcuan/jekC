@@ -11,8 +11,8 @@ html, body{
 div.wrapper{
 	font-family: 'Montserrat', sans-serif;
 	min-height: 100%;
+	font-size: .8em;
 }
-
 div.footer{
 	position:absolute;
 	bottom:0;
@@ -25,14 +25,16 @@ div.footer{
 @media only screen and (max-width: 364px){
 	div.main{
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr auto 1fr 1fr;
+		grid-template-rows: 1fr;
 	}
 	div.main-content{
 		grid-row: 1;
+		grid-column: 1/span 5;
 		border: 1px solid red;
 	}
-	div.gotos{
-		grid-row: 2;
+	div.gotos {
+		grid-column: 1/span 5;
 		border: 1px solid red;
 	}
 }
@@ -54,33 +56,35 @@ div.footer{
 
 /* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:fixed; z-index: -1; width: 100%; height: 100%; background-color: #2c2e43; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
 
-
+.hide{
+	display: none;
+}
+.show{
+	display: inline-block;
+	transform: scale(1em;)
+}
 .container {
 	display: inline-block;
 	cursor: pointer;
 }
-
 .bar1,
 .bar2,
 .bar3 {
 	width: 35px;
 	height: 5px;
-	background-color: #333;
+	background-color: rgb(228, 228, 228);
 	margin: 6px 0;
-	transition: 0.4s;
+	transition: 0.3s;
 }
-
 /* Rotate first bar */
 .change .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 	transform: rotate(-45deg) translate(-9px, 6px);
 }
-
 /* Fade out the second bar */
 .change .bar2 {
 	opacity: 0;
 }
-
 /* Rotate last bar */
 .change .bar3 {
 	-webkit-transform: rotate(45deg) translate(-8px, -8px);

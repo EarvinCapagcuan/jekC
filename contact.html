@@ -12,17 +12,24 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- bootstrap(offline) -->
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 
 <body>
     <!--particles.js container -->
     <div id="particles-js"></div>
-    <div class="wrapper">
+    <div class="wrapper animated fadeIn">
         <div class="header container-fluid m-0 p-0">
-            <nav class="navbar fadeInRight">
-                <div class="nav-container" style="display: none;">
-                    <ul class="nav bg-light">
+            <nav class="navbar">
+                <button class="burger-icon btn-outline-dark ml-auto">
+                    <div class="container" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+                <div class="hide nav-container">
+                    <ul class="nav bg-light animated fadeInDown">
                         <li class="nav-item">
                             <a href="./index.html" class="nav-link active">home</a>
                         </li>
@@ -36,16 +43,15 @@
                             <a href="./works.html" class="nav-link">works</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">contact</a>
+                            <a href="#" onClick = "loadUrl('./contact.html')" class="nav-link">contact</a>
                         </li>
                     </ul>
                 </div>
-                <button class="burger-icon btn-outline-dark ml-auto"
-                    style="background-image: url('./assets/images/Hamburger_icon.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; height: 48px; width: 48px;"></button>
+
             </nav>
         </div>
         <div class="main container-fluid">
-            
+            <h5 class="title text-light">contact</h5>
         </div>
         <div class="footer text-light ml-auto">
             <small>2019 | &copy; Julian Earvin King Capagcuan</small>
