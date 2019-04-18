@@ -13,15 +13,20 @@
     <!-- bootstrap(offline) -->
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="prerender" href="./index.html">
-    <link rel="prefetch" href="./contact.html">
 </head>
 
 <body>
     <!--particles.js container -->
     <div id="particles-js"></div>
-    <div class="header animated fadeIn" style="position: fixed; z-index:1;">
-        <nav class="navbar navbar-dark">
+    <div class="header animated fadeIn w-100" style="position: fixed; z-index:1;">
+        <button class="navbar-toggler burger-icon float-right p-0 m-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+            <div class="container" onclick="navBarChange(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+        <nav class="navbar">
             <div class="collapse nav-container" id="navbarToggleExternalContent">
                 <ul class="nav navigation-bar">
                     <li class="nav-item">
@@ -41,17 +46,8 @@
                     </li>
                 </ul>
             </div>
-            <button class="navbar-toggler burger-icon p-0 m-0" type="button" data-toggle="collapse"
-            data-target="#navbarToggleExternalContent">
-            <div class="container" onclick="navBarChange(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-        </button>
-        
-    </nav>
-</div>
+        </nav>
+    </div>
 
     <main class="main container-fluid text-light">
         <section class="landing content active-content animated fadeIn" id="landing" data-target="landing">
@@ -145,31 +141,9 @@
         <section class="contact content animated fadeIn" data-target="contact">
             <h5>contact</h5>
             <div class="contact-form">
-                <form class="needs-validation" novalidate>
-                    <div class="form-group">
-                        <label class="form-label" for="name">name</label>
-                        <input type="text" name="name" id="name" class="form-control form-inputs">
-                        <div class="invalid-feedback">
-                            So, you're a no-name huh.
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">email</label>
-                        <input type="email" name="email" id="email" class="form-control form-inputs" required>
-                        <div class="invalid-feedback">
-                            How will I respond without an email address?
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" class="form-inputs form-control"
-                            required></textarea>
-                        <div class="invalid-feedback">
-                            you've got nothing to say?
-                        </div>
-                    </div>
-                    <button class="btn btn-dark contact-button" type="submit">submit</button>
-                </form>
+                <a href=”mailto:earvin&#46;capagcuan&#64;gmail&#46;com?subject=Thanks for the HTML code&body=Dearest Joe Hage post reader, %0A%0AJust
+                    hit SEND to let me know you stopped by and found this useful.%0A%0AAdd a personal note below if you
+                    like.%0A%0AThanks!%0A%0AJoe Hage” class="email-to"> this link </a>
             </div>
         </section>
     </main>

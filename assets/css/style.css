@@ -13,7 +13,6 @@ html, body{
 	min-height: 100%;
 	font-size: .8em;
 }
-
 main{
 	margin-top: 30vh;
 }
@@ -33,6 +32,12 @@ main{
 	display: block;
 }
 
+nav{
+	margin: 0;
+	padding: 0;
+	display: grid !important;
+	grid-template: auto auto !important;
+}
 
 /* ---- reset ---- */
 body {
@@ -100,49 +105,42 @@ canvas {
 	background-color: rgba(126, 126, 126, 0.171) !important;
 	border: none !important;
 }
-/* .active-button{
-	z-index: 1;
-	background-color: rgb(138, 138, 138) !important;
-	border: none;
-	transition: all 1s;
-	transform: translate(3vh, -2vh) scale(.5);
-}
-.inactive-button {
-	transition: all 1s;
-	transform: scale(1);
-} */
 
-@media only screen and (max-width: 364px){
-	div.main{
+@media only screen and (max-width: 640px) {
+	.main{
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
 	}
-	div.main-content{
+	.main-content{
 		grid-row: 1;
 		grid-column: 1/span 5;
 		border: 1px solid red;
 	}
-	div.gotos {
+	.gotos {
 		grid-column: 1/span 5;
 		border: 1px solid red;
 	}
 	.nav-link {
 		font-size: .8em !important;
+		padding: 10px !important;
 		color: white;
+	}
+	.burger-icon {
+		transform: scale(.7);
 	}
 }
 
 @media only screen and (min-width: 764px){
-	div.main {
+	.main {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
-	div.main-content{
+	.main-content{
 		grid-row: 1;
 		border: 1px solid red;
 	}
-	div.gotos{
+	.gotos{
 		grid-row: 2;
 		border: 1px solid red;
 	}
@@ -151,7 +149,6 @@ canvas {
 		grid-template-rows: auto;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	}
-	
 	.card-1 {
 		grid-column: 1/span 5;
 		grid-row: 1;

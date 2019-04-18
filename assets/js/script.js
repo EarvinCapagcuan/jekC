@@ -48,6 +48,9 @@ function navBarChange(x) {
 }
 
 window.addEventListener('click', function(e){
+    if (e.target.classList.contains('email-to')) {
+        console.log('test');
+    }
     /* prevent anchor from */
     e.preventDefault();
 
