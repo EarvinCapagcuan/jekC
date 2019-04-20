@@ -7,30 +7,34 @@ let submitButton = document.getElementsByClassName('contact-button');
 let head = document.getElementsByClassName('header');
 let navButtonStatus = false;
 let scrollStatus = false;
+let prevWindows = [];
+
+window.addEventListener('keydown', function (e) {
+    let key = e.keyCode || event.charCode;
+    if (key == 8) {
+        console.log('backspace');
+    }
+});
 
 window.addEventListener('scroll', function () {
     if (document.documentElement.scrollTop > 10) {
         scrollStatus = true;
-    }else{
+    } else {
         scrollStatus = false;
     }
     changeBg(); 
 });
 
 function changeBg(){
-    if (scrollStatus) {
-            head[0].style.background = 'hsla(360, 100%, 100%, 0.3)';
+    if (navButtonStatus && document.documentElement.scrollTop > 10) {
+        head[0].classList.add('scrolled');
     } else {
-        head[0].style.background = '';
+        scrollStatus = false;
+        head[0].classList.remove('scrolled');
     }
-    scrollStatus = false;
 }
 
 function navBarChange(x) {
-    if (scrollStatus) {
-        changeBg();
-    }
-
     if (navButtonStatus) {
         navUl[0].classList.replace('fadeInRight', 'fadeOutRight');
         window.setTimeout(function(){
@@ -39,17 +43,18 @@ function navBarChange(x) {
         }, 500);
         navButtonStatus = false;
     }else{
+        navButtonStatus = true;
         nav[0].classList.replace('hide', 'show');
         navUl[0].classList.add('fadeInRight');
-        navButtonStatus = true;
     }
+    changeBg();
     x.classList.toggle("change");
     navButton[0].classList.toggle("active-button");
 }
 
 window.addEventListener('click', function(e){
     if (e.target.classList.contains('email-to')) {
-        console.log('test');
+        window.location = "mailto:earvin.capagcuan@gmail.com?subject=Good day&body=Hi.";
     }
     /* prevent anchor from */
     e.preventDefault();
@@ -68,7 +73,7 @@ window.addEventListener('click', function(e){
         /* target data-target of link that was clicked */
         let activeWindow = active[0].getAttribute('data-target');
         let goToLink = document.getElementsByClassName(x);
-    
+        
         /* determine the active section */
         if (x != activeWindow) {
             /* remove active-content class to hide section */
@@ -88,6 +93,12 @@ window.addEventListener('click', function(e){
             }else{
                 navLink[i].classList.remove('text-muted');
             }
+        }
+
+        /* will be used for backspace / return to prev page */
+        prevWindows.unshift(activeWindow);
+        if (prevWindows.length > 15) {
+            prevWindows.pop();
         }
     }
 });

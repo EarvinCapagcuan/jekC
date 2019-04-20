@@ -8,15 +8,17 @@ html, body{
 	width: 100%;
 	padding-bottom: 30px; 
 	overflow-x: hidden;
-	
 	font-family: 'Montserrat', sans-serif;
 	min-height: 100%;
-	font-size: .8em;
+	font-size: 1em;
 }
-main{
-	margin-top: 30vh;
+.header{
+	transition: .5s ease-in-out;
 }
-
+.scrolled{
+	background-color: hsla(360, 100%, 100%, 0.3);
+	font-size: 1.05em;
+}
 .footer{
 	position: relative;
 	bottom: 0;
@@ -44,11 +46,9 @@ body {
 	margin: 0;
 	font: normal 75% Arial, Helvetica, sans-serif;
 }
-
 canvas {
 	display: block;
 }
-
 /* ---- particles.js container ---- */
 #particles-js {
 	position: fixed;
@@ -64,16 +64,13 @@ canvas {
 .hide {
 	display: none;
 }
-
 .show {
 	display: inline-block;
 }
-
 .container {
 	display: inline-block;
 	cursor: pointer;
 }
-
 .bar1,
 .bar2,
 .bar3 {
@@ -83,30 +80,32 @@ canvas {
 	margin: 6px 0;
 	transition: all 0.3s;
 }
-
 /* Rotate first bar */
 .change .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 	transform: rotate(-45deg) translate(-9px, 6px);
 }
-
 /* Fade out the second bar */
 .change .bar2 {
 	opacity: 0;
 }
-
 /* Rotate last bar */
 .change .bar3 {
 	-webkit-transform: rotate(45deg) translate(-8px, -8px);
 	transform: rotate(45deg) translate(-8px, -8px);
 }
 
-.form-inputs  {
-	background-color: rgba(126, 126, 126, 0.171) !important;
-	border: none !important;
-}
-
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 360px) {
+	main {
+		margin-top: 15vh;
+	}
+	.landing,
+	.profile,
+	.skills,
+	.contact{
+		font-size: 1.2em;
+		margin-top: 10vh;
+	}
 	.main{
 		display: grid;
 		grid-template-columns: 1fr;
@@ -115,36 +114,74 @@ canvas {
 	.main-content{
 		grid-row: 1;
 		grid-column: 1/span 5;
-		border: 1px solid red;
 	}
 	.gotos {
 		grid-column: 1/span 5;
-		border: 1px solid red;
 	}
 	.nav-link {
-		font-size: .8em !important;
+		font-size: .7em !important;
 		padding: 10px !important;
 		color: white;
 	}
 	.burger-icon {
 		transform: scale(.7);
 	}
+	.work-wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-gap: 20px;
+	}
+	.work {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	.text-content h5 {
+		font-size: .9em;
+	}
+	.text-content {
+		grid-column: 2/ span 3;
+		grid-row: 1/ span 2;
+		padding-left: 50px;
+		text-align: left;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.img-container {
+		grid-column: 1/ span 3;
+		grid-row: 1/ span 2;
+	}
+
+	.work p {
+		grid-column: 3/ span 2;
+		grid-row: 1/ span 2;
+	}
+
+	.work-img {
+		height: 15vh;
+		width: 30vh;
+		background-size: cover;
+		-webkit-clip-path: polygon(0 0, 0 120px, 180px 50px, 180px 0);
+	}
 }
 
 @media only screen and (min-width: 764px){
+	main {
+		margin-top: 30vh;
+	}
 	.main {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
 	.main-content{
 		grid-row: 1;
-		border: 1px solid red;
 	}
 	.gotos{
 		grid-row: 2;
-		border: 1px solid red;
 	}
-	.card-holder {
+/* 	.card-holder {
 		display: grid;
 		grid-template-rows: auto;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -153,15 +190,10 @@ canvas {
 		grid-column: 1/span 5;
 		grid-row: 1;
 	}
-	
 	.card-2 {
 		grid-column: 3/span 5;
 		grid-row: 1;
-		
-		display: grid;
-		grid-column: 1fr 1fr 1fr 1fr
 	}
-	
 	.card-3 {
 		grid-column: 6/span 5;
 		grid-row: 1;
@@ -171,12 +203,41 @@ canvas {
 		transition: all .3s;
 		transform: translateX(5vh);
 	}
-	
 	.card-holder .card:hover {
 		z-index: 1;
 		transform-origin: 90% 10%;
 		transform: scale(1.1);
 		transition: all .5s;
 		box-shadow: 0px 0px 10px grey;
-	}
+	} */
 }
+
+/* .card-body{
+	transition: all 0.275s ease-in-out;
+}
+.card-1:hover .card-body,
+.card-2:hover .card-body,
+.card-3:hover .card-body {
+	transform: scale(1.25);
+}
+.card-1,
+.card-2,
+.card-3 {
+	overflow: hidden;
+} */
+/* .nav a {
+	text-decoration: none;
+}
+.nav a:hover{
+	padding-bottom: .25em;
+	margin: 0 auto;
+	color: #1480fc;
+	border-bottom: 1px solid #1480fc;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .8s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%231480fc' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 20%;
+	border-bottom: 0;
+	padding-bottom: .3em;
+	text-decoration: none;
+} */

@@ -18,8 +18,8 @@
 <body>
     <!--particles.js container -->
     <div id="particles-js"></div>
-    <div class="header animated fadeIn w-100" style="position: fixed; z-index:1;">
-        <button class="navbar-toggler burger-icon float-right p-0 m-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+    <div class="header animated fadeIn w-100 m-auto" style="position: fixed; z-index:1;">
+        <button class="navbar-toggler burger-icon float-right p-0 mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
             <div class="container" onclick="navBarChange(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -86,26 +86,47 @@
         
         <section class="works content animated fadeIn" id="works" data-target="works">
             <h3 class="text-light">works</h3>
-            <div class="card-holder">
-                <div class="card-1 card">
-                    <div class="card-header">
-                        website 1
+            <div class="work-wrapper">
+                <div class="work-1 work">
+                    <div class="img-container">
+                        <img src="./assets/images/gundam-base.jpg" class="work-img" alt="gundam base">
                     </div>
-                    <div class="card-body"
-                    style="background:url('./assets/images/gundam-base.jpg') no-repeat top right; background-size:200%;">
-                    <h5 class="card-title">website</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Ullam quas laudantium maiores sint, corrupti et doloremque
-                        cupiditate iste! Sapiente delectus vero laudantium, alias provident
-                        tenetur id quisquam repudiandae maiores numquam!</p>
-                        <a href="#" class="btn btn-primary">go now</a>
+                    <div class="text-content">
+                        <h5>gundam base</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="work-2 work">
+                    <div class="img-container">
+                        <img src="./assets/images/strangethings.png" class="work-img" alt="strange things auction">
+                    </div>
+                    <div class="text-content">
+                        <h5>strange things auction</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="work-3 work">
+                    <div class="img-container">
+                        <img src="./assets/images/alveare.png" class="work-img" alt="alveare CMS">
+                    </div>
+                    <div class="text-content">
+                        <h5>the alveare</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+<!--             <div class="card-holder">
+                <div class="card-1 card rounded-0 border-0">
+                    <div class="overlay"></div>
+                    <div class="card-body" style="background:url('./assets/images/gundam-base.jpg') no-repeat top right; background-size:200%;">
+                        <h5 class="card-title">gundam base</h5>
+                        <p class="card-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, porro.
+                        </p>
+                        <a href="#" class="card-link">go</a>
                     </div>
                 </div>
-                <br>
-                <div class="card-2 card">
-                    <div class="card-header">
-                        website 2
-                    </div>
+                <div class="card-2 card rounded-0 border-0">
                     <div class="card-body" style="background:url('./assets/images/strangethings.png') no-repeat top right;
                     background-size:cover;">
                     <h5 class="card-title">website</h5>
@@ -116,11 +137,7 @@
                         <a href="#" class="btn btn-primary">go now</a>
                     </div>
                 </div>
-                <br>
-                <div class="card-3 card">
-                    <div class="card-header">
-                        website 3
-                    </div>
+                <div class="card-3 card rounded-0 border-0">
                     <div class="card-body" style="background:url('./assets/images/alveare.png') no-repeat top right;
                     background-size:cover;">
                     <h5 class="card-title">website</h5>
@@ -131,19 +148,18 @@
                         <a href="#" class="btn btn-primary">go now</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="gotos my-5">
                 <h5 class="text-light">like what you see?</h5>
                 <a href="#contact" class="goto-link btn btn-light" data-target="contact">contact me</a>
             </div>
         </section>
 
-        <section class="contact content animated fadeIn" data-target="contact">
+        <section class="contact content animated fadeIn" id="contact" data-target="contact">
             <h5>contact</h5>
-            <div class="contact-form">
-                <a href=”mailto:earvin&#46;capagcuan&#64;gmail&#46;com?subject=Thanks for the HTML code&body=Dearest Joe Hage post reader, %0A%0AJust
-                    hit SEND to let me know you stopped by and found this useful.%0A%0AAdd a personal note below if you
-                    like.%0A%0AThanks!%0A%0AJoe Hage” class="email-to"> this link </a>
+            <div class="contact-details">
+                <a href=”#email” target="_blank" class="email-to">Send me an email!</a>
+                <span>+63-921-2848-791</span>
             </div>
         </section>
     </main>
