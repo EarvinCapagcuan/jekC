@@ -97,14 +97,14 @@ canvas {
 
 @media only screen and (max-width: 360px) {
 	main {
-		margin-top: 15vh;
+		margin-top: 13vh;
 	}
 	.landing,
 	.profile,
 	.skills,
 	.contact{
 		font-size: 1.2em;
-		margin-top: 10vh;
+		margin-top: 7vh;
 	}
 	.main{
 		display: grid;
@@ -148,7 +148,6 @@ canvas {
 		display: flex;
 		align-items: flex-end;
 	}
-
 	.img-container {
 		grid-column: 1/ span 3;
 		grid-row: 1/ span 2;
@@ -164,6 +163,34 @@ canvas {
 		width: 30vh;
 		background-size: cover;
 		-webkit-clip-path: polygon(0 0, 0 120px, 180px 50px, 180px 0);
+	}
+	.contact-wrapper{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 5px;
+	}
+	.contact-details {
+
+	}
+	.social-buttons{
+		padding-top: 15px;
+		border-top: 1px white solid;
+		text-align: center;
+	}
+	.skills-list{
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+	}
+	.skills-list ul{
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+	.skills-list ul li{
+		display: flex;
+		margin-top: 5px;
+		margin-left: 10px;
 	}
 }
 
