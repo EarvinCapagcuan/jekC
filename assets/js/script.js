@@ -82,16 +82,16 @@ window.addEventListener('click', function(e){
             goToLink[0].classList.toggle('active-content');
         }
     
-        /* add class text-muted to the active window/link */
+        /* add class active-link to the active window/link */
         let navLink = document.getElementsByClassName('nav-link');
         let act = active[0].getAttribute('data-target');
 
         for (let i = 0; i < navLink.length; i++) {
             let dataAttr = navLink[i].getAttribute('data-target');
             if (dataAttr == act) {
-                navLink[i].classList.add('text-muted');
+                navLink[i].classList.add('active-link');
             }else{
-                navLink[i].classList.remove('text-muted');
+                navLink[i].classList.remove('active-link');
             }
         }
 
