@@ -53,8 +53,26 @@ function navBarChange(x) {
 }
 
 window.addEventListener('click', function(e){
+    let linkArr = ['mailto:earvin.capagcuan@gmail.com?subject=Good day&body=Hi.',
+    'https://github.com/EarvinCapagcuan',
+    'http://m.me/jek.capagcuan',
+    'https://www.linkedin.com/in/julian-earvin-king-capagcuan'];
+
     if (e.target.classList.contains('email-to')) {
-        window.location = "mailto:earvin.capagcuan@gmail.com?subject=Good day&body=Hi.";
+        window.open(linkArr[0], '_blank');
+        location.reload();
+    }
+    if (e.target.classList.contains('git-hb')) {
+        window.open(linkArr[1], '_blank');
+        location.reload();
+    }
+    if (e.target.classList.contains('msgr-fb')) {
+        window.open(linkArr[2], '_blank');
+        location.reload();
+    }
+    if (e.target.classList.contains('lnkd-in')) {
+        window.open(linkArr[3], '_blank');
+        location.reload();
     }
     /* prevent anchor from */
     e.preventDefault();

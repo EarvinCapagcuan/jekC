@@ -12,7 +12,7 @@ main {
 	background-color: #0E273C;
 }
 footer {
-	color: #2C8C99;
+	color: #931621;
 	height: 15px;
 	margin-top: -25px;
 	margin-right: 10px;
@@ -110,13 +110,13 @@ nav{
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 	}
-	.text-content h2{
-		font-size: 1.2em;
-		color: white;
+	.text-content h3{
+		font-size: 1.5em;
 		text-shadow: 2px 2px 5px #326771;
+		color: #E6E8E6;
 	}
 	.work p{
-		font-size: .7em !important;
+		font-size: .65em !important;
 		text-shadow: 2px 2px 5px #326771;
 	}
 	.text-content {
@@ -134,6 +134,9 @@ nav{
 		font-size: .8em;
 		grid-column: 3/ span 2;
 		grid-row: 1/ span 2;
+	}
+	.text-content p:last-child{
+		display: none;
 	}
 	.work-img {
 		height: 15vh;
@@ -228,6 +231,7 @@ nav{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
+		overflow: hidden;
 	}
 	.work:hover .work-img{
 		filter: grayscale(100%);
@@ -244,43 +248,68 @@ nav{
 		height: 100%;
 		transition: all .5s ease-in-out;
 	}
+	.work:hover .text-content{
+		height: 250px;
+		background-color: hsla(187, 56%, 39%, 0.733);
+	}
+	.work:hover .text-content h3{
+		text-align: right;
+	}
+	.text-content > p {
+		display: none;
+	}
+	.text-content:hover > p {
+		display: block;
+	}
 	.text-content {
 		grid-column: 1/ span 4;
-		grid-row: 4;
 		height: 100px;
 		padding-left: 5px;
 		padding-right: 5px;
-		background-color: hsla(187, 55%, 39%, 0.42);
-		z-index: 3;
+		background-color: hsla(187, 56%, 39%, 0.42);
+		z-index: 1;
+		-webkit-transition: .4s;
+		transition: .4s;
 	}
 	.text-content h3 {
-		text-align: right;
-		color: white;
+		padding-top: 25px;
+		text-align: center;
+		color: #E6E8E6;
 		text-shadow: 3px 1px 5px rgb(148, 148, 148);
 	}
-	.text-content p {
+	.text-content > p {
 		text-indent: 20em;
 		font-size: .8em;
 		text-align: right;
-		color: white;
+		color: #E6E8E6;
 	}
 }
 
 .nav-link {
-	color: white !important;
+	color: #E6E8E6 !important;
 }
 .active-link {
 	color: #931621 !important;
 	text-decoration: underline !important;
+}
+.skills ul h5:first-child,
+.section-title{
+	color: #931621 !important;
+}
+.text-content p:last-child{
+	
 }
 .landing,
 .profile,
 .skills,
 .works,
 .contact {
-	color: white !important;
+	color: #E6E8E6 !important;
 }
-
+.social-buttons{
+	display: flex;
+	justify-content: space-evenly;
+}
 /* for desktop */
 /* 	.card-holder {
 			display: grid;
