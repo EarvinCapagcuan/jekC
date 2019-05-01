@@ -1,7 +1,15 @@
 const canvas = document.querySelector('#canvas');
+const mainHeight = document.getElementsByTagName('main');
 
-const initWidth = window.innerWidth;
-const initHeight = window.innerHeight;
+const initWidth = document.body.scrollWidth;
+const initHeight = mainHeight[0].clientHeight;
+
+window.addEventListener('resize', screenAdjust);
+
+window.addEventListener('click', (initHeight) => {
+    initHeight = mainHeight[0].clientHeight;
+    canvas.height = initHeight;
+});
 
 canvas.width = initWidth;
 canvas.height = initHeight;
@@ -47,16 +55,47 @@ function Circle(x, y, dx, dy, radius) { //circle object
         this.draw();
     }
 }
+var count = 0;
+var device = deviceOS();
+
+function deviceOS() {
+    var useragent = navigator.userAgent;
+
+    if (useragent.match(/Android/i)) {
+        return count = 250;
+    } else if (useragent.match(/webOS/i)) {
+        return count = 800;
+    } else if (useragent.match(/iPhone/i)) {
+        return count = 250;
+    } else if (useragent.match(/iPod/i)) {
+        return count = 300;
+    } else if (useragent.match(/iPad/i)) {
+        return count = 300;
+    } else if (useragent.match(/Windows Phone/i)) {
+        return count = 200;
+    } else if (useragent.match(/SymbianOS/i)) {
+        return count = 200;
+    } else if (useragent.match(/RIM/i) || useragent.match(/BB/i)) {
+        return count = 200;
+    } else if(useragent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i)) {
+        var ci = document.addEventListener('mousemove', function (e) {
+            mousePosition.x = e.x;
+            mousePosition.y = e.y;
+        });
+        return count = 800;
+    } else {
+        return false;
+    }
+}
 
 var circleArray = [];
 var colorArray = [
-    '#931621',
-    '#0C120C',
-    '#2B8E9B',
-    '#326771'
+    'hsla(120, 20%, 6%, 0.58)',
+    'hsla(187, 57%, 39%, 0.58)',
+    'hsla(190, 39%, 32%, 0.58)'
 ];
 
-for (var i = 0; i <= 800; i++) {
+for (var i = 0; i <= count; i++) {
     var radius = Math.random() * (3 + 1);
 
     var x = Math.random() * (initWidth - radius * 2) + radius;
@@ -84,23 +123,13 @@ var mousePosition = {
 var maxRadius = 40;
 var minRadius = Math.random() * 2 + 1;
 
-var ci = document.addEventListener('mousemove', function (e) {
-    mousePosition.x = e.x;
-    mousePosition.y = e.y;
-});
+function screenAdjust(initWidth, initHeight) {
+    initWidth = window.innerWidth;
+    initHeight = window.innerHeight;
 
-var pop = document.addEventListener('click', function (e) {
-    console.log(`click: x: ${mousePosition.x} y: ${mousePosition.y}`);
-});
-
-window.addEventListener('resize', screenAdjust);
-
-function screenAdjust() {
+    context.clearRect(0, 0, initWidth, initHeight);
     canvas.width = initWidth;
     canvas.height = initHeight;
-    context.clearRect(0, 0, innerWidth, innerHeight);
-
-    console.log("resized");
 }
 
 animate();

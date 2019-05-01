@@ -16,6 +16,8 @@ window.addEventListener('keydown', function (e) {
     }
 });
 
+console.log(document.body.scrollHeight);
+
 window.addEventListener('scroll', function () {
     if (document.documentElement.scrollTop > 10) {
         scrollStatus = true;
@@ -56,7 +58,8 @@ window.addEventListener('click', function(e){
     let linkArr = ['mailto:earvin.capagcuan@gmail.com?subject=Good day&body=Hi.',
     'https://github.com/EarvinCapagcuan',
     'http://m.me/jek.capagcuan',
-    'https://www.linkedin.com/in/julian-earvin-king-capagcuan'];
+    'https://www.linkedin.com/in/julian-earvin-king-capagcuan',
+    './assets/jekc_resume.pdf'];
 
     if (e.target.classList.contains('email-to')) {
         window.open(linkArr[0], '_blank');
@@ -72,6 +75,10 @@ window.addEventListener('click', function(e){
     }
     if (e.target.classList.contains('lnkd-in')) {
         window.open(linkArr[3], '_blank');
+        location.reload();
+    }
+    if (e.target.classList.contains('resume')){
+        window.open(linkArr[4], '_blank');
         location.reload();
     }
     /* prevent anchor from */

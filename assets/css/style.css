@@ -7,12 +7,14 @@ html, body{
 	min-height: 100%;
 	min-width: 100%;
 	font-family: 'Montserrat', sans-serif;
+
 }
 main {
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 footer {
-	color: #931621;
+	color: #931620;
 	height: 15px;
 	margin-top: -25px;
 	margin-right: 10px;
@@ -22,10 +24,8 @@ canvas{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	background-color: #0E273C;
-	z-index: -1;
+	z-index: -5;
 }
 .header{
 	transition: .5s ease-in-out;
@@ -34,7 +34,7 @@ canvas{
 	z-index: 1;
 }
 .scrolled{
-	background-color: hsla(187, 55%, 39%, 0.97);
+	background-color: rgba(44, 141, 154, 0.97);
 	font-size: 1.02em;
 }
 .content{
@@ -157,7 +157,7 @@ nav{
 	.contact-wrapper{
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr;
 		grid-gap: 5px;
 	}
 	.social-buttons{
@@ -186,9 +186,29 @@ nav{
 		margin-top: 5px;
 		margin-left: 10px;
 	}
+	.social-buttons {
+		display: grid !important;
+		grid-template-columns: 1fr;
+	}
+	.details{
+		grid-column: 1;
+	}
+	.social-links {
+		grid-column: 1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	br{
+		display: none;
+	}
 }
 
 @media only screen and (min-width: 761px) {
+	section{
+		font-size: 1.25em !important;
+	}
 	.main{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -229,6 +249,7 @@ nav{
 		justify-content: space-evenly;
 	}
 	.works {
+		font-size: 1em !important;
 		overflow-x: hidden;
 		grid-column: 1/ span 2;
 	}
@@ -296,16 +317,15 @@ nav{
 		padding-top: 10px;
 		margin-top: 10px;
 		display: grid !important;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		border-top: 1px solid #931621;
 	}
-	.contact-text {
-		grid-column: 1/ span 3;
+	.details {
+		grid-column: 1/ span 6;
 		grid-row: 1;
 	}
-	.icon-container {
-		grid-column: 1/ span 3;
+	.social-links {
+		grid-column: 1/ span 6;
 		grid-row: 2;
 	}
 }
@@ -338,6 +358,24 @@ a{
 a:hover{
 	color: #b8111e !important;
 }
+.contact-icons .fab,
+.contact-icons .fas {
+	color: #b8111e !important;
+	transition: all .4s ease-in-out;
+}
+.contact-icons{
+	color: #E6E8E6;
+	transition: all .4s ease-in-out;
+}
+.contact-icons:hover {
+	color: #b8111e !important;
+
+}
+.contact-icons:hover .fab,
+.contact-icons:hover .fas {
+	color: #E6E8E6 !important;
+}
+
 /* for desktop */
 /* 	.card-holder {
 			display: grid;

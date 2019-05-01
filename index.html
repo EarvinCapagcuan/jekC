@@ -19,9 +19,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
 </head>
-
 <body>
-    <canvas id="canvas"></canvas>
     <div class="header animated fadeIn w-100">
         <button class="navbar-toggler burger-icon float-right p-0 mt-2 mr-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
             <div class="container" onclick="navBarChange(this)">
@@ -53,8 +51,8 @@
             </div>
         </nav>
     </div>
-
     <main class="main container-fluid">
+        <canvas id="canvas"></canvas>
         <section class="landing content active-content animated fadeIn" id="landing" data-target="landing">
              <h5 class="name">julian capagcuan</h5>
              <p class="title section-title">• fullstack web developer •</p>
@@ -92,6 +90,7 @@
                     <li>html5</li>
                     <li>css</li>
                     <li>js</li>
+                    <li>canvas</li>
                 </ul>
                 <ul>
                     <h5>&mdash;back&#8202;&ndash;&#8202;end</h5>
@@ -147,7 +146,7 @@
                 </div>
             </div>
             <div class="gotos mt-3 mb-5">
-                <h5 class="text-light">like what you see?</h5>
+                <h5 class="text-light">if you have a great idea for a project, need help, or just want someone to talk with</h5>
                 <a href="#contact" class="goto-link btn btn-light" data-target="contact">contact me</a>
             </div>
         </section>
@@ -155,35 +154,43 @@
         <section class="contact content animated fadeIn" id="contact" data-target="contact">
             <h3 class="section-title">contact</h3>
             <div class="contact-wrapper">
-                <div class="contact-details mt-3">
-                    <span>send me an <i class="fas fa-envelope-square fa-lg"></i> <a href=”#email” target="_blank" class="email-to">email</a></span>
-                    <br>
-                    <span>reach me at <i class="fas fa-phone"></i> +63-921-2848-791</span>
-                    <br>
-                    <span>or you can download my <i class="fas fa-file"></i> <a href="./assets/resume.docx">resume</a></span>
-                </div>
                 <div class="icon-container">
                     <div class="social-buttons">
-                        <p class="contact-text">you can also message me on linkedIn, facebook messenger and view my github activity.</p>
-                        <span>
-                            <a href="#github" class="btn contact-icons git-hb">
-                                <img src="./assets/images/gh-64.png" height="56px" alt="github"
-                                class="git-hb contact-icons">
-                                <span>github</span>
-                            </a>
-                        </span>
-                        <span>
-                            <a href="#linkedin" class="btn contact-icons lnkd-in">
-                                <img src="./assets/images/li-64.png" height="56px" alt="linkedin" class="lnkd-in contact-icons">
-                                <span>linked in</span>
-                            </a>
-                        </span>
-                        <span>
-                            <a href="#msgr" class="btn contact-icons msgr-fb">
-                                <img src="./assets/images/msgr.png" height=" 56px" class="msgr-fb contact-icons" alt="facebook">
-                                <span>messenger</span>
-                            </a>
-                        </span>
+                        <div class="details">
+                            <p class="contact-text">you can check my linkedIn profile, message me on facebook messenger and view my github activity or send me an email.</p>
+                        </div>
+                        <div class="social-links">
+                            <span class="btn contact-icons number">
+                                <i class="fas fa-phone fa-2x"></i> +63.921.2848.791
+                            </span>
+                            <span>
+                                <a href="#resume" class="btn contact-icons resume">
+                                    <span class="btn contact-icons resume"><i class="fas fa-file-code fa-2x"></i> resume</span>
+                                </a>
+                            </span>
+                            <span>
+                            <span>
+                                <a href=”#email” target="_blank" class="btn contact-icons email-to">
+                                    <span class="contact-icons email-to"><i class="fas fa-envelope-square fa-2x"></i> email</span>
+                                </a>
+                            </span>
+                            <br>
+                            <span>
+                                <a href="#linkedin" class="btn contact-icons lnkd-in">
+                                    <span class="lnkd-in contact-icons"><i class="fab fa-linkedin fa-2x"></i> linkedin</span>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#github" class="btn contact-icons git-hb">
+                                    <span class="git-hb contact-icons"><i class="fab fa-github fa-2x"></i> github</span>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#msgr" class="btn contact-icons msgr-fb">
+                                    <span class="msgr-fb contact-icons"><i class="fab fa-facebook-messenger fa-2x"></i> messenger</span>
+                                </a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
