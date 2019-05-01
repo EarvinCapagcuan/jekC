@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>portfolio</title>
+    <title>jcapagcuan - fullstack web developer</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,11 +13,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- bootstrap(offline) -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
 </head>
 
-<body">
+<body>
+    <canvas id="canvas"></canvas>
     <div class="header animated fadeIn w-100">
         <button class="navbar-toggler burger-icon float-right p-0 mt-2 mr-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
             <div class="container" onclick="navBarChange(this)">
@@ -45,6 +49,7 @@
                         <a href="#contact" class="nav-link" data-target="contact">contact</a>
                     </li>
                 </ul>
+                
             </div>
         </nav>
     </div>
@@ -151,22 +156,35 @@
             <h3 class="section-title">contact</h3>
             <div class="contact-wrapper">
                 <div class="contact-details mt-3">
-                    <span>send me an <a href=”#email” target="_blank" class="email-to">email!</a></span>
+                    <span>send me an <i class="fas fa-envelope-square fa-lg"></i> <a href=”#email” target="_blank" class="email-to">email</a></span>
                     <br>
-                    <span>reach me at +63-921-2848-791</span>
+                    <span>reach me at <i class="fas fa-phone"></i> +63-921-2848-791</span>
                     <br>
-                    <span>or you can download my <a href="./assets/resume.docx">resume</a></span>
+                    <span>or you can download my <i class="fas fa-file"></i> <a href="./assets/resume.docx">resume</a></span>
                 </div>
-                <div class="social-buttons" >
-                    <a href="#github" class="btn contact-icons git-hb"><img src="./assets/images/gh-64.png"
-                            height="56px" alt="github" class="git-hb"></a>
-                    <br>
-                    <a href="#linkedin" class="btn contact-icons lnkd-in"><img src="./assets/images/li-64.png"
-                            height="56px"
-                            alt="linkedin" class="lnkd-in"></a>
-                    <br>
-                    <a href="#msgr" class="btn contact-icons msgr-fb"><img src="./assets/images/msgr.png" height=" 56px"
-                    class="msgr-fb" alt="facebook"></a>
+                <div class="icon-container">
+                    <div class="social-buttons">
+                        <p class="contact-text">you can also message me on linkedIn, facebook messenger and view my github activity.</p>
+                        <span>
+                            <a href="#github" class="btn contact-icons git-hb">
+                                <img src="./assets/images/gh-64.png" height="56px" alt="github"
+                                class="git-hb contact-icons">
+                                <span>github</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#linkedin" class="btn contact-icons lnkd-in">
+                                <img src="./assets/images/li-64.png" height="56px" alt="linkedin" class="lnkd-in contact-icons">
+                                <span>linked in</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#msgr" class="btn contact-icons msgr-fb">
+                                <img src="./assets/images/msgr.png" height=" 56px" class="msgr-fb contact-icons" alt="facebook">
+                                <span>messenger</span>
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,6 +203,7 @@
         crossorigin="anonymous"></script> -->
     <script src="./assets/js/script.js"></script>
     <!-- scripts(offline) -->
+    <script src="./assets/js/canvas.js"></script>
     <script src="./assets/js/jquery-3.3.1.js"></script>
     <script src="./assets/js/popper.js"></script>
     <script src="./assets/js/bootstrap/bootstrap.js"></script>

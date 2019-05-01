@@ -5,11 +5,11 @@
 }
 html, body{
 	min-height: 100%;
+	min-width: 100%;
 	font-family: 'Montserrat', sans-serif;
 }
 main {
 	min-height: 100vh;
-	background-color: #0E273C;
 }
 footer {
 	color: #931621;
@@ -17,6 +17,15 @@ footer {
 	margin-top: -25px;
 	margin-right: 10px;
 	text-align: right;
+}
+canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0E273C;
+	z-index: -1;
 }
 .header{
 	transition: .5s ease-in-out;
@@ -283,6 +292,22 @@ nav{
 		text-align: right;
 		color: #E6E8E6;
 	}
+	.social-buttons{
+		padding-top: 10px;
+		margin-top: 10px;
+		display: grid !important;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		border-top: 1px solid #931621;
+	}
+	.contact-text {
+		grid-column: 1/ span 3;
+		grid-row: 1;
+	}
+	.icon-container {
+		grid-column: 1/ span 3;
+		grid-row: 2;
+	}
 }
 
 .nav-link {
@@ -296,9 +321,6 @@ nav{
 .section-title{
 	color: #931621 !important;
 }
-.text-content p:last-child{
-	
-}
 .landing,
 .profile,
 .skills,
@@ -309,6 +331,12 @@ nav{
 .social-buttons{
 	display: flex;
 	justify-content: space-evenly;
+}
+a{
+	color: #931621 !important;
+}
+a:hover{
+	color: #b8111e !important;
 }
 /* for desktop */
 /* 	.card-holder {
