@@ -59,7 +59,7 @@ window.addEventListener('click', function(e){
     'https://github.com/EarvinCapagcuan',
     'http://m.me/jek.capagcuan',
     'https://www.linkedin.com/in/julian-earvin-king-capagcuan',
-    './assets/jekc_resume.pdf'];
+    './assets/resume.pdf'];
 
     if (e.target.classList.contains('email-to')) {
         window.open(linkArr[0], '_blank');
@@ -80,6 +80,10 @@ window.addEventListener('click', function(e){
     if (e.target.classList.contains('resume')){
         window.open(linkArr[4], '_blank');
         location.reload();
+    }
+    if (e.target.classList.contains('works-button')){
+        let go = e.target.getAttribute('data-target');
+        window.open(go, '_blank');
     }
     /* prevent anchor from */
     e.preventDefault();

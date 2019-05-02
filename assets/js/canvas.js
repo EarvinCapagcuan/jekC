@@ -96,7 +96,7 @@ var colorArray = [
 ];
 
 for (var i = 0; i <= count; i++) {
-    var radius = Math.random() * (3 + 1);
+    var radius = Math.random() * (1 + 1);
 
     var x = Math.random() * (initWidth - radius * 2) + radius;
     var y = Math.random() * (initHeight - radius * 2) + radius;
@@ -120,8 +120,8 @@ var mousePosition = {
     x: undefined,
     y: undefined
 }
-var maxRadius = 40;
-var minRadius = Math.random() * 2 + 1;
+var maxRadius = 30;
+var minRadius = Math.random() * 1 + 1;
 
 function screenAdjust(initWidth, initHeight) {
     initWidth = window.innerWidth;
