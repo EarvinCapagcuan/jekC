@@ -33,7 +33,7 @@ canvas{
 }
 .scrolled{
 	background-color: rgba(44, 141, 154, 0.97);
-	font-size: 1.02em;
+	font-size: 1em;
 }
 .content{
 	display: none;
